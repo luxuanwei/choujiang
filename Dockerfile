@@ -9,7 +9,7 @@ ENV CATALINA_BASE /var/lib/tomcat7
 ENV CATALINA_PID  /var/run/tomcat7.pid
 ENV CATALINA_SH   /usr/share/tomcat7/bin/catalina.sh
 ENV CATALINA_TMPDIR /tmp/tomcat7-tomcat7-tmp
-COPY 2048.war /var/lib/tomcat7/webapps
+COPY ./ /var/lib/tomcat7/webapps
 
 RUN mkdir -p $CATALINA_TMPDIR
 VOLUME ["/var/lib/tomcat7/webapps/"]
